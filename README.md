@@ -24,6 +24,7 @@ while 1:
 	f.PrintText(0, 2, "Hello")
 
 	# Print a character in the middle of the screen.
+	# Only use "PrintAt()" if you're printing a single character.
 	f.PrintAt(int(f.width / 2), int(f.height / 2), ',')
 
 	# Print 'World!' in the bottom right corner of the screen.
