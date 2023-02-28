@@ -19,8 +19,15 @@ from Framebuffer import Framebuffer
 f = Framebuffer()
 
 while 1:
-	f.PrintAt(0, 2, "Hello")
-	f.PrintAt(f.width - 1 - (len("World!") * 2), f.height - 2, "World!")
+
+	# Print 'Hello' in the top left corner of the screen.
+	f.PrintText(0, 2, "Hello")
+
+	# Print a character in the middle of the screen.
+	f.PrintAt(int(f.width / 2), int(f.height / 2), ',')
+
+	# Print 'World!' in the bottom right corner of the screen.
+	f.PrintText(f.width - 1 - (len("World!")), f.height - 2, "World!")
 
 	f.Draw()
 ```
