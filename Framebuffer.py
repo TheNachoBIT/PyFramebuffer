@@ -29,6 +29,7 @@ class Framebuffer:
 			os.system("cls")
 			self.Resize()
 
+		self.ClearScreen()
 		self.lastWidth = self.width
 		self.lastHeight = self.height
 
@@ -57,6 +58,10 @@ class Framebuffer:
 
 	def Cleanup(self):
 		self.buffer.clear()
+
+	def ClearScreen(self):
+		for x in range(self.width * self.height):
+			self.buffer[x] = ' '
 
 	def Draw(self):
 		print(''.join(self.buffer))
